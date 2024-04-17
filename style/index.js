@@ -30,29 +30,3 @@ cancelButton.addEventListener('click', () => {
     cartItems.innerHTML = '';  // 장바구니 내 모든 항목을 비웁니다.
     alert('결제가 취소되었습니다.');
 });
-
-// 회원가입 모달 열기
-const signupButton = document.querySelector('.signup-button');
-const signupModal = document.getElementById('signup-modal');
-const closeSignupModal = signupModal.querySelector('.close');
-
-signupButton.addEventListener('click', () => {
-    signupModal.style.display = 'block';
-});
-
-closeSignupModal.addEventListener('click', () => {
-    signupModal.style.display = 'none';
-});
-
-// 로그인 모달 열기
-const loginButton = document.querySelector('.login-button');
-const loginModal = document.getElementById('login-modal');
-const closeLoginModal = loginModal.querySelector('.close');
-
-loginButton.addEventListener('click', () => {
-    loginModal.style.display = 'block';
-});
-
-closeLoginModal.addEventListener('click', () => {
-    loginModal.style.display = 'none';
-});

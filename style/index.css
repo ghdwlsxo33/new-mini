@@ -6,7 +6,7 @@ body {
   background: linear-gradient(to right, #e6e9f0, #eef1f5);
 }
 
-header, footer {
+header {
   background-color: #333;
   color: #fff;
   text-align: center;
@@ -14,9 +14,21 @@ header, footer {
   background: linear-gradient(to right, #414345, #232526);
 }
 
+footer {
+  background-color: #333;
+  color: #fff;
+  position: relative;
+  bottom: 10px;
+  text-align: center;
+  width: 100vw;
+  padding: 1rem 0;
+  background: linear-gradient(to right, #414345, #232526);
+}
+
+
 main {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 20px;
 }
 
@@ -31,16 +43,21 @@ main {
 
 /* 상품 목록 스타일 */
 .products {
-  flex: 3;
+  flex: 4fr;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, minmax(10vw, 1fr));
   gap: 20px;
+  height: auto-fit;
+  /* max-height: 30vw; */
 }
 
-.product {
+ .product {
   background: white;
   border: none;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  height: auto-fit;
+  max-width: 15vw;
+  /* max-height: 30vw; */
   transition: transform 0.3s ease-in-out;
 }
 
@@ -49,27 +66,31 @@ main {
 }
 
 .product img {
+  
   max-width: 100%;
-  height: auto;
+  height: 20vw;
   display: block;
 }
 
-/* 장바구니 스타일 */
-.cart {
+/* 장바구니 스타일 */ 
+ .cart {
   flex: 1;
   background: #fff;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin-left: 20px;
-}
+} 
 
 .cart-items {
+  display: flex;
   list-style-type: none;
+  max-width: 30vw;
   padding: 0;
 }
 
 /* 버튼 스타일 */
-button {
+
+button  {
   background-color: #4CAF50;
   color: white;
   padding: 10px 20px;
@@ -123,4 +144,17 @@ button.cancel:hover {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+
+.main-button{
+
+  position: relative;
+  right: 46vw;  
+  background-color: rgba(128, 128, 128, 0.596);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
 }

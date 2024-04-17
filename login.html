@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" type="text/css" href="./style/login.css">
+    <script src="./style/login.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <form id="loginForm">
+            <h2>로그인</h2>
+            <input type="email" id="loginEmail" placeholder="이메일" required>
+            <input type="password" id="loginPassword" placeholder="비밀번호" required>
+            <button type="button" onclick="login()">로그인</button>
+            <p>아직 회원이 아니신가요? <a href="./signup.html" onclick="toggleForms()">회원가입</a></p>
+        </form>
+    
+        <form id="signupForm" style="display:none">
+            <h2>회원가입</h2>
+            <input type="text" id="signupName" placeholder="이름" required>
+            <input type="email" id="signupEmail" placeholder="이메일" required>
+            <input type="password" id="signupPassword" placeholder="비밀번호" required>
+            <button type="button" onclick="signup()">회원가입</button>
+            <p>이미 회원이신가요? <a href="./login.html" onclick="toggleForms()">로그인</a></p>
+        </form>
+        <form id="home">
+            <button type="button" onclick="location.href='./index.html'">돌아가기</button>  
+        </form>
+    </div>
+</body>
+</html>
